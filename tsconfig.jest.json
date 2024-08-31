@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "Node16",
+    "jsx": "react-jsx",
+    "baseUrl": "./src/client",
+    "paths": {
+      "@/*": ["./src/client/*"]
+    },
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "strict": true
+  },
+  "include": ["src/**/*", "src/client/__tests__/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

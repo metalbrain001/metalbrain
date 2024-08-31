@@ -1,0 +1,43 @@
+{
+  "presets": [
+    ["@babel/preset-env", { "targets": { "node": "current" } }],
+    "@babel/preset-typescript",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": 3,
+        "useESModules": true,
+        "regenerator": true
+      }
+    ],
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    [
+      "module-resolver",
+      {
+        "root": ["./src"],
+        "alias": {
+          "@": "./src/client",
+          "components": "./src/client/components",
+          "utils": "./src/utils",
+          "assets": "./public/assets",
+          "services": "./src/services",
+          "hooks": "./src/hooks",
+          "context": "./src/context",
+          "pages": "./src/pages",
+          "routes": "./src/routes",
+          "config": "./src/config",
+          "types": "./src/types"
+        }
+      }
+    ]
+  ],
+  "ignore": ["node_modules"]
+}
