@@ -2,6 +2,7 @@ import Loader from '@/components/shared/Loader';
 import { Button } from '@/components/ui/button';
 import { useFetchUserStories } from '@/lib/react-query/storiesQueryAndMutations/StoryQueryAndMutation';
 import { timeAgo } from '@/lib/utils';
+import { IStory } from '@/types';
 import { useState } from 'react';
 
 const StoryViewer = ({ story }: any) => {
@@ -16,7 +17,7 @@ const StoryViewer = ({ story }: any) => {
     setSelectStory(story);
   };
 
-  const handleStoryClick = (story: any) => {
+  const handleStoryClick = (story: IStory) => {
     setSelectStory(story);
   };
 
