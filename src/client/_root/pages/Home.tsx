@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input';
 import { useToast } from '@/components/ui/use-toast';
 import { useGetAllPosts } from '@/lib/react-query/postQueryMutations/PostQueryAndMutations';
 import { useGetAllUsers } from '@/lib/react-query/userQueryMutations/UserQueryAndMutations';
-import { IUpdatePost } from '@/types';
+import { IUpdatePost, IUser } from '@/types';
 import { useState } from 'react';
 
 const Home = () => {
@@ -106,7 +106,7 @@ const Home = () => {
             <Loader />
           ) : (
             <ul className="user-grid">
-              {creators?.map((creator: any) => (
+              {creators?.map((creator: IUser) => (
                 <li key={creator?.id} className="flex-1 min-w-w[200px] w-full">
                   <UserCard user={creator} />
                 </li>
